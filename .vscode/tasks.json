@@ -1,0 +1,37 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "Compilar simplest_ffmpeg_audio_player",
+            "command": "F:\\develop\\msys2\\mingw32\\bin\\g++.exe",
+            "args": [
+                //"-g",
+                "-O2",
+                "-Os",
+                "${fileDirname}\\${fileBasename}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                //"${cwd}\\simplePlay.exe",
+                "-lmingw32",
+                "-lSDL2main","-lSDL2",
+                //"-lSDLmain","-lSDL",
+                "-lavutil", "-lavformat", "-lavcodec", "-lswresample"
+                //"-lavutil", "-lavformat", "-lavcodec", "-lswscale", "-lswresample"
+                //,"-w"
+                
+            ],
+            "options": {
+                "cwd": "F:\\develop\\msys2\\mingw32\\bin"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Compilar simplest_ffmpeg_audio_player"
+        }
+    ],
+    "version": "2.0.0"
+}
